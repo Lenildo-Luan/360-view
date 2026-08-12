@@ -1,0 +1,64 @@
+<svg width="2400" height="1200" viewBox="0 0 2400 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="58%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#082f49" />
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="1" />
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="2400" height="1200" fill="url(#sky)" />
+
+  <circle cx="1860" cy="280" r="180" fill="url(#sunGlow)" opacity="0.9" />
+  <circle cx="1860" cy="280" r="72" fill="#fef08a" />
+
+  <g fill="#ffffff" opacity="0.82">
+    <ellipse cx="350" cy="170" rx="118" ry="42" />
+    <ellipse cx="450" cy="170" rx="150" ry="50" />
+    <ellipse cx="520" cy="180" rx="94" ry="34" />
+
+    <ellipse cx="1120" cy="190" rx="130" ry="44" />
+    <ellipse cx="1235" cy="190" rx="170" ry="54" />
+    <ellipse cx="1350" cy="202" rx="100" ry="36" />
+
+    <ellipse cx="1980" cy="170" rx="120" ry="38" />
+    <ellipse cx="2085" cy="170" rx="160" ry="50" />
+    <ellipse cx="2190" cy="180" rx="90" ry="32" />
+  </g>
+
+  <path d="M0 700C180 645 320 620 520 648C710 676 850 646 1010 608C1150 576 1335 575 1510 620C1650 656 1810 642 1970 608C2140 572 2280 580 2400 610V1200H0Z" fill="#0f172a" />
+  <path d="M0 780C195 733 356 705 520 723C683 742 847 725 995 692C1175 652 1318 658 1490 698C1650 734 1807 724 1980 690C2147 657 2288 662 2400 686V1200H0Z" fill="#172554" opacity="0.9" />
+
+  <path d="M0 860C255 828 435 815 630 824C822 833 1016 812 1195 778C1385 741 1588 747 1775 785C1955 822 2150 823 2400 792V1200H0Z" fill="url(#water)" />
+
+  <g opacity="0.6" fill="#38bdf8">
+    <path d="M180 888c170-36 297-36 445 0-148 32-275 32-445 0z" />
+    <path d="M780 904c165-34 305-34 460 0-155 30-295 30-460 0z" />
+    <path d="M1500 892c168-34 298-34 450 0-152 31-282 31-450 0z" />
+    <path d="M2020 916c120-24 220-24 340 0-120 20-220 20-340 0z" />
+  </g>
+
+  <g fill="#64748b">
+    <path d="M0 810L170 630L280 700L385 610L520 760L0 760Z" />
+    <path d="M420 760L610 560L760 640L890 520L1035 720L420 720Z" />
+    <path d="M920 740L1080 580L1210 650L1380 540L1540 730L920 730Z" />
+    <path d="M1430 770L1610 610L1760 690L1890 590L2050 770L1430 770Z" />
+    <path d="M1980 760L2140 620L2290 680L2400 610L2400 760Z" />
+  </g>
+
+  <g opacity="0.25" fill="#ffffff">
+    <rect x="120" y="910" width="190" height="18" rx="9" />
+    <rect x="470" y="935" width="240" height="18" rx="9" />
+    <rect x="930" y="920" width="190" height="18" rx="9" />
+    <rect x="1540" y="945" width="240" height="18" rx="9" />
+    <rect x="2020" y="930" width="210" height="18" rx="9" />
+  </g>
+</svg>

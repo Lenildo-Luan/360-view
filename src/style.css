@@ -1,0 +1,243 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #eff6ff;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.22), transparent 35%),
+    linear-gradient(180deg, #08111f 0%, #020817 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+code {
+  display: inline-flex;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.5rem;
+  background: rgba(15, 23, 42, 0.75);
+  color: #dbeafe;
+}
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+.intro {
+  margin-bottom: 18px;
+}
+
+.eyebrow,
+.details-kicker {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #93c5fd;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.lede,
+.details-description {
+  margin-top: 14px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.viewer-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+}
+
+.pano-viewer {
+  position: relative;
+  width: 100%;
+  height: min(68vh, 680px);
+  overflow: hidden;
+}
+
+.pano-viewer canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.view360-hotspots {
+  position: absolute;
+  inset: 0;
+}
+
+.search,
+.link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.search {
+  width: 24px;
+  height: 24px;
+}
+
+.search::before {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.search::after {
+  position: absolute;
+  content: '';
+  top: 14px;
+  left: 14px;
+  width: 3px;
+  height: 8px;
+  background: #fff;
+  transform-origin: 50% 0%;
+  transform: rotate(-45deg);
+}
+
+.link {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  white-space: pre-line;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.link-label {
+  display: inline-block;
+  min-width: 116px;
+  padding: 0.1rem 0.4rem;
+}
+
+.modal {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+.modal[data-visible='true'] {
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.modal-card {
+  width: min(86%, 520px);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.45);
+}
+
+.modal-cover {
+  min-height: 250px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px;
+  background:
+    radial-gradient(circle at top, rgba(251, 191, 36, 0.35), transparent 40%),
+    linear-gradient(160deg, #1d4ed8 0%, #0f172a 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.modal-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notes {
+  margin-top: 18px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.details-card {
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.62);
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100%, calc(100% - 20px));
+    padding-top: 18px;
+  }
+
+  .pano-viewer {
+    height: 62vh;
+  }
+
+  .notes {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    width: min(92%, 440px);
+    grid-template-columns: 1fr;
+  }
+
+  .modal-cover {
+    min-height: 180px;
+  }
+}
